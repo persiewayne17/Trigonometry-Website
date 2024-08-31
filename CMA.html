@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compound and Multiple Angles</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h2 {
+            color: #2E86C1;
+        }
+        h3 {
+            color: #2874A6;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        ul {
+            list-style-type: square;
+            margin-left: 20px;
+        }
+        .formula {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-left: 3px solid #2E86C1;
+            margin: 10px 0;
+        }
+        .example {
+            background-color: #e8f0fe;
+            padding: 10px;
+            border-left: 3px solid #2874A6;
+            margin: 10px 0;
+        }
+        footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    clear: both;
+}
+    </style>
+</head>
+<body>
+    <h2>Compound and Multiple Angles</h2>
+
+    <p>In trigonometry, compound and multiple angles refer to specific formulas that help us find the sine, cosine, and tangent of the sum, difference, or multiples of angles. These formulas are very useful when working with trigonometric identities and solving trigonometric equations.</p>
+
+    <h3>1. Compound Angles</h3>
+    <p>Compound angles involve the addition or subtraction of two angles. The most common formulas are:</p>
+    
+    <ul>
+        <li><strong>Sine of a Sum or Difference</strong>:</li>
+    </ul>
+    <div class="formula">
+        <p><strong>sin(A ± B) = sin A cos B ± cos A sin B</strong></p>
+    </div>
+    <div class="example">
+        <p><strong>Example:</strong> If A = 30° and B = 45°, then</p>
+        <p>sin(30° + 45°) = sin 30° cos 45° + cos 30° sin 45°</p>
+        <p>Using the values sin 30° = 1/2, cos 45° = √2/2, cos 30° = √3/2, and sin 45° = √2/2, we get:</p>
+        <p>sin 75° = (1/2) × (√2/2) + (√3/2) × (√2/2) = (√2/4) + (√6/4) = (√2 + √6)/4</p>
+    </div>
+
+    <ul>
+        <li><strong>Cosine of a Sum or Difference</strong>:</li>
+    </ul>
+    <div class="formula">
+        <p><strong>cos(A ± B) = cos A cos B ∓ sin A sin B</strong></p>
+    </div>
+    <div class="example">
+        <p><strong>Example:</strong> If A = 60° and B = 30°, then</p>
+        <p>cos(60° - 30°) = cos 60° cos 30° + sin 60° sin 30°</p>
+        <p>Using the values cos 60° = 1/2, cos 30° = √3/2, sin 60° = √3/2, and sin 30° = 1/2, we get:</p>
+        <p>cos 30° = (1/2) × (√3/2) + (√3/2) × (1/2) = (√3/4) + (√3/4) = √3/2</p>
+    </div>
+
+    <ul>
+        <li><strong>Tangent of a Sum or Difference</strong>:</li>
+    </ul>
+    <div class="formula">
+        <p><strong>tan(A ± B) = (tan A ± tan B) / (1 ∓ tan A tan B)</strong></p>
+    </div>
+    <div class="example">
+        <p><strong>Example:</strong> If A = 45° and B = 15°, then</p>
+        <p>tan(45° + 15°) = (tan 45° + tan 15°) / (1 - tan 45° × tan 15°)</p>
+        <p>Using tan 45° = 1 and tan 15° ≈ 0.268, we get:</p>
+        <p>tan 60° ≈ (1 + 0.268) / (1 - 1 × 0.268) = 1.268 / 0.732 ≈ 1.732</p>
+    </div>
+
+    <h3>2. Multiple Angles</h3>
+    <p>Multiple angles involve finding the sine, cosine, or tangent of an angle that is multiplied by an integer, like 2A or 3A. The most common formulas are:</p>
+
+    <ul>
+        <li><strong>Double Angle Formulas</strong>:</li>
+    </ul>
+    <div class="formula">
+        <p><strong>Sine:</strong> sin(2A) = 2 sin A cos A</p>
+    </div>
+    <div class="example">
+        <p><strong>Example:</strong> If A = 30°, then</p>
+        <p>sin(2 × 30°) = 2 sin 30° cos 30° = 2 × (1/2) × (√3/2) = √3/2</p>
+    </div>
+
+    <div class="formula">
+        <p><strong>Cosine:</strong> cos(2A) = cos² A - sin² A</p>
+    </div>
+    <div class="example">
+        <p><strong>Example:</strong> If A = 45°, then</p>
+        <p>cos(2 × 45°) = cos² 45° - sin² 45° = (√2/2)² - (√2/2)² = 0</p>
+    </div>
+
+    <div class="formula">
+        <p><strong>Tangent:</strong> tan(2A) = (2 tan A) / (1 - tan² A)</p>
+    </div>
+    <div class="example">
+        <p><strong>Example:</strong> If A = 30°, then</p>
+        <p>tan(2 × 30°) = (2 × tan 30°) / (1 - tan² 30°) = (2 × 1/√3) / (1 - (1/√3)²) = √3</p>
+    </div>
+
+    <p>These formulas are essential in solving more complex trigonometric equations and proving trigonometric identities. They also help in solving problems involving angles in geometry and physics.</p>
+</body>
+<footer>
+    <p>&copy; 2024 Trigonometry Website</p>
+</footer>
+</html>

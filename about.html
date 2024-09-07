@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trigonometry Topics for SHS 2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 5px;
+            line-height: 1.6;
+            background-color: #f7f9fb;
+            color: #2c3e50;
+        }
+header {
+    min-height: 100vh;
+    width: 100%;
+    background-image:  linear-gradient(rgba(4,9,30,0.7),rgba(4,
+9,30,0.7)),url(vana.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    font-size: 14px;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo-video {
+    height: 100px;
+    width: 150px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 4px 8px;
+    position: relative;
+    font-size: 16px;
+    
+}
+.nav-links ul li a{
+    color: #7eddd5;
+    text-decoration: none;
+    
+}
+.nav-links ul li::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;  
+    transition: 0.5s;  
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+nav .fa-solid{
+    display: none;
+}
+
+/* Show dropdown on hover */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+    color: #2E86C1;
+}
+
+.dropdown button {
+    background-color: #162347;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown button:hover {
+    background-color: #862f2f59;
+}
+
+.dropdown-content {
+    text-align: left;
+    color: #a7c0d1;
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    font-size: 16px;
+    min-width: 80px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: rgba(0, 0, 0, 0.61);
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+}
+
+.dropdown-content a:hover {
+    background-color: #b35757;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+ h1{
+    font-size: 32px;
+}
+
+        h2 {
+            color: #35393d;
+            text-align: Left;
+        }
+        h2 {
+            color: #2980b9;
+            margin-top: 40px;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        .content {
+            max-width: 800px;
+            margin: auto;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            margin: 5px;
+            border-radius: 8px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0.9em;
+            color: #7f8c8d;
+       }
+    </style>
+</head>
+<body>
+
+<header>
+        <nav>
+            <video class="logo-video" autoplay muted loop>
+                <source src="van.aba.mp4" type="video/mp4">
+            </video>
+            
+            <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+            <div class="nav-links" id="navLinks">
+            <ul>
+                
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="help.html">Help</a></li>
+          <div class="dropdown">
+            <li><a href="#">Trigonometry-Content</a>
+                <div class="dropdown-content">
+                    <a href="TRR.html">Trigonometric Ratios And Rules</a>
+                    <a href="TF.html">Trigonometric Functions</a>
+                    <a href="CMA.html">Compound And
+                        Multiple Angles</a>
+                    <a href="examp.html">Examples</a>
+                    <a href="cheat.html">Trig Cheat Sheet</a>
+            
+                </div>
+                </li>
+            </div>
+            <li><a href="faqs.html">FAQs</a></li>
+            <li><a href="siteDev.html">Site Developers</a></li>    
+        </ul>
+
+        </div>
+    </nav>   
+</header>            
+
+    
+<h1>About Trigonometry</h1>
+    <div class="content">
+        <h2>Trigonometry</h2>
+        <p>
+            Welcome to the Trigonometry Learning Resource for Senior High School (SHS) 2 students! This page provides a comprehensive overview of essential trigonometric concepts that are fundamental to understanding advanced mathematics. 
+        </p>
+        <p>
+            Trigonometry is a branch of mathematics that studies the relationships between the angles and sides of triangles. These concepts are used extensively in fields such as engineering, physics, architecture, and even computer science. By mastering these topics, you will not only improve your problem-solving skills but also build a strong foundation for more complex mathematical principles.
+        </p>
+        <p>
+            Below, we cover three key topics: Trigonometric Identities, Solving Trigonometric Equations, and Graphs of Trigonometric Functions. Each section is designed to provide you with the necessary knowledge and examples to help you understand and apply these concepts in real-world scenarios.
+        </p>
+        
+
+        <h2>1. Trigonometric Identities</h2>
+        <p>Trigonometric identities are equations that involve trigonometric functions and are true for any value of the variable. Key identities include:</p>
+        <ul>
+            <li><strong>Pythagorean Identity:</strong> <code>sin<sup>2</sup>θ + cos<sup>2</sup>θ = 1</code></li>
+            <li><strong>Sum and Difference Formulas:</strong></li>
+            <ul>
+                <li><code>sin(A ± B) = sin A cos B ± cos A sin B</code></li>
+                <li><code>cos(A ± B) = cos A cos B ∓ sin A sin B</code></li>
+            </ul>
+            <li><strong>Double Angle Formulas:</strong></li>
+            <ul>
+                <li><code>sin 2θ = 2sin θ cos θ</code></li>
+                <li><code>cos 2θ = cos<sup>2</sup>θ - sin<sup>2</sup>θ</code></li>
+            </ul>
+        </ul>
+
+        <!-- Placeholder image for Trigonometric Identities -->
+        <img src="image.png" alt="Trigonometric Identities Illustration">
+
+        <h2>2. Solving Trigonometric Equations</h2>
+        <p>Solving trigonometric equations involves finding the values of the variable that satisfy the equation. Key steps include isolating the trigonometric function and using inverse functions.</p>
+        <ul>
+            <li><strong>Isolate the function:</strong> Simplify to isolate <code>sin θ</code>, <code>cos θ</code>, etc.</li>
+            <li><strong>Use inverse trigonometry:</strong> Apply inverse functions to find the principal value.</li>
+            <li><strong>General solutions:</strong> Consider periodic nature for all solutions.</li>
+        </ul>
+
+        <!-- Placeholder image for solving trigonometric equations -->
+        <img src="cat.jpg" alt="Solving Trigonometric Equations Illustration">
+
+        <h2>3. Graphs of Trigonometric Functions</h2>
+        <p>Trigonometric functions like sine and cosine are periodic, with specific features such as amplitude, period, and phase shift. Tangent graphs have vertical asymptotes and a period of <code>180&deg;</code>.</p>
+        <ul>
+            <li><strong>Sine and Cosine Graphs:</strong> Period of <code>360&deg;</code> or <code>2π</code> radians.</li>
+            <li><strong>Tangent Graph:</strong> Period of <code>180&deg;</code> or <code>π</code> radians, with asymptotes where the function is undefined.</li>
+        </ul>
+
+        <!-- Placeholder image for Trigonometric Graphs -->
+        <img src="ball.jpg".jpg" alt="Trigonometric Graphs Illustration">
+
+    </div>
+
+    <footer>
+        &copy; 2024 Trigonometry Learning Resources
+    </footer>
+
+</body>
+</html>

@@ -51,8 +51,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const username = signupUsernameInput.value.trim();
     const email = signupEmailInput.value.trim();
-    const password = signupPasswordInput;
-    const confirmPassword = signupPasswordConfirmInput;
+    const password = signupPasswordInput.value.trim();
+    const confirmPassword = signupPasswordConfirmInput.value.trim();
 
     // Validate that passwords match
     if (password !== confirmPassword) {
@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
     event.preventDefault();
 
     const enteredUsername = usernameInput.value.trim();
-    const enteredPassword = passwordInput;
+    const enteredPassword = passwordInput.value.trim();
 
     // Checking if the entered credentials match any in localStorage
     const user = storedCredentials.find(
@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (user) {
       // Successful login
-      window.location.href = "/frontend html/home.html";
+      window.location.href = "dashboard.html";
     } else {
       // Invalid credentials
       errorMessage.textContent =

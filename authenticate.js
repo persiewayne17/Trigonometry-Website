@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (user) {
       // Successful login
-      window.location.href = "dashboard.html";
+      window.location.href = "home.html";
     } else {
       // Invalid credentials
       errorMessage.textContent =

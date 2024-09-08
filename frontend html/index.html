@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trigonometry Website</title>
+    <link rel="stylesheet" href="/frontend css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script defer src="/js files/script.js"></script>
+  </head>
+  <body>
+    <!---------------Header-------------->
+    <header>
+      <nav>
+        <video class="logo-video" autoplay muted loop>
+          <source src="/vid/van.aba.mp4" type="video/mp4" />
+        </video>
+
+        <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+        <div class="nav-links" id="navLinks">
+          <ul>
+            <li><a href="/frontend html/index.html">Home</a></li>
+            <li><a href="/frontend html/about.html">About</a></li>
+            <li><a href="/frontend html/help.html">Help</a></li>
+            <div class="dropdown">
+              <li>
+                <a href="#">Trigonometry-Content</a>
+                <div class="dropdown-content">
+                  <a href="/frontend html/TRR.html"
+                    >Trigonometric Ratios And Rules</a
+                  >
+                  <a href="/frontend html/TF.html">Trigonometric Functions</a>
+                  <a href="/frontend html/CMA.html"
+                    >Compound And Multiple Angles</a
+                  >
+                  <a href="/frontend html/examp.html">Examples</a>
+                  <a href="/frontend html/cheat.html">Trig Cheat Sheet</a>
+                </div>
+              </li>
+            </div>
+            <li><a href="/frontend html/faqs.html">FAQs</a></li>
+            <li><a href="/frontend html/siteDev.html">Site Developers</a></li>
+            <li><a href="/frontend html/dvd.html">Video Tutorials</a></li>
+          </ul>
+        </div>
+        <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+      </nav>
+
+      <div class="text-box">
+        <h1>TRIGMASTERS</h1>
+        <p>Creating a dedicated space for exploring trigonometry</p>
+        <a href="" class="hero-btn">Visit Us To Know More</a>
+      </div>
+    </header>
+
+    <!---------about------>
+    <section class="content">
+      <div class="content-text">
+        <h1>Welcome to Trigonometry Website</h1>
+        <p>
+          Trigonometry is one of the important branches in the history of
+          mathematics that deals with the study of the relationship between the
+          sides and angles of a right-angled triangle. This concept is given by
+          the Greek mathematician Hipparchus. In this article, we are going to
+          learn the basics of trigonometry such as trigonometry functions,
+          ratios, trigonometry table, formulas and many solved examples.
+        </p>
+        <p>
+          Trigonometry Ratios-Sine, Cosine, Tangent. The trigonometric ratios of
+          a triangle are also called the trigonometric functions. Sine, cosine,
+          and tangent are 3 important trigonometric functions and are
+          abbreviated as sin, cos and tan. Let us see how are these ratios or
+          functions, evaluated in case of a right-angled triangle. Consider a
+          right-angled triangle, where the longest side is called the
+          hypotenuse, and the sides opposite to the hypotenuse are referred to
+          as the adjacent and opposite sides.
+        </p>
+        <p>
+          This website aims to effectively teach the concepts of trigonometry to
+          SHS 2 students.
+        </p>
+        <p>
+          Purpose: To organize the trigonometry content in a clear and logical
+          structure for easy understanding.
+        </p>
+      </div>
+      <!-- Image Section -->
+
+      <img src="/imgs/Diagram1.png" alt="Trigonometry Diagram" />
+    </section>
+
+    <!------Topics Under Trig--------->
+    <section class="course">
+      <h1>Essential Topics</h1>
+      <hr />
+      <p>
+        Trigonometric Identities, Solving Trigonometric Equations, and
+        <br />Graphs of Trigonometric Functions, with key formulas and concepts
+        highlighted.
+      </p>
+      <div class="row">
+        <div class="course-col">
+          <h3>Trigonometric Identities</h3>
+          <p>
+            Trigonometric identities are equations that involve trigonometric
+            functions and are true for any value of the variable. They are
+            essential for simplifying expressions and solving trigonometric
+            equations. Key identities include:
+          </p>
+
+          <ul>
+            <li>
+              <strong>Pythagorean Identity:</strong>
+              <code>sin<sup>2</sup>θ + cos<sup>2</sup>θ = 1</code>
+            </li>
+            <li><strong>Sum and Difference Formulas:</strong></li>
+            <ul>
+              <li><code>sin(A ± B) = sin A cos B ± cos A sin B</code></li>
+              <li><code>cos(A ± B) = cos A cos B ∓ sin A sin B</code></li>
+            </ul>
+            <li><strong>Double Angle Formulas:</strong></li>
+            <ul>
+              <li><code>sin 2θ = 2sin θ cos θ</code></li>
+              <li><code>cos 2θ = cos<sup>2</sup>θ - sin<sup>2</sup>θ</code></li>
+            </ul>
+          </ul>
+        </div>
+
+        <div class="course-col">
+          <h3>Solving Trigonometry Equations</h3>
+          <p>
+            Solving trigonometric equations involves finding the values of the
+            variable (often an angle) that satisfy the equation. It typically
+            requires the use of trigonometric identities and inverse functions.
+            Common steps include:
+          </p>
+
+          <ul>
+            <li>
+              <strong>Isolate the trigonometric function:</strong> Simplify the
+              equation to isolate <code>sin θ</code>, <code>cos θ</code>, or
+              another trigonometric function.
+            </li>
+            <li>
+              <strong>Use inverse trigonometry:</strong> Apply the inverse
+              function (e.g., <code>θ = sin<sup>-1</sup>(x)</code>) to find the
+              principal value.
+            </li>
+            <li>
+              <strong>Find general solutions:</strong> Consider the periodic
+              nature of trigonometric functions to get all possible solutions.
+              For example, the general solution for <code>sin θ = x</code> is
+              <code>θ = sin<sup>-1</sup>(x) + 360&deg;n</code> or
+              <code>θ = 180&deg; - sin<sup>-1</sup>(x) + 360&deg;n</code>, where
+              <code>n</code> is an integer.
+            </li>
+          </ul>
+        </div>
+        <div class="course-col">
+          <h3>Graph representation</h3>
+          <p>
+            Understanding the graphical representation of trigonometric
+            functions is crucial in visualizing their behavior. Key features
+            include:
+          </p>
+
+          <ul>
+            <li>
+              <strong>Sine and Cosine Graphs:</strong> These are periodic
+              functions with a period of <code>360&deg;</code> or
+              <code>2π</code> radians. The sine curve starts at 0, while the
+              cosine curve starts at its maximum value.
+              <ul>
+                <li>
+                  <strong>Amplitude:</strong> The maximum value of the graph
+                  (e.g., 1 for <code>sin θ</code>).
+                </li>
+                <li>
+                  <strong>Period:</strong> The length of one complete cycle
+                  (e.g., <code>360&deg;</code> for <code>sin θ</code> and
+                  <code>cos θ</code>).
+                </li>
+                <li>
+                  <strong>Phase Shift:</strong> A horizontal shift of the graph
+                  due to an added constant.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Tangent Graph:</strong> This function has vertical
+              asymptotes where the function is undefined, and its period is
+              <code>180&deg;</code> or <code>π</code> radians.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section></section>
+
+    <!----------footer--------->
+    <footer>
+      <p>&copy; 2024 Trigonometry Website</p>
+    </footer>
+  </body>
+</html>

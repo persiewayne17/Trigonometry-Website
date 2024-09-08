@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trigonometry Website</title>
     <link rel="stylesheet" href="/frontend css/styles.css" />
@@ -9,46 +10,54 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-    <script defer src="/js files/script.js"></script>
-    <meta
-      name="description"
-      content="A comprehensive guide to trigonometry for SHS 2 students. Learn about trigonometric functions, ratios, and more."
-    />
   </head>
   <body>
     <!---------------Header-------------->
     <header>
       <nav>
         <video class="logo-video" autoplay muted loop>
-          <source src="/vid/van.aba.mp4" type="video/mp4" />
+          <source
+            src="/vid/van.aba.mp4
+          "
+            type="video/mp4"
+          />
         </video>
 
+        <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
         <div class="nav-links" id="navLinks">
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="help.html">Help</a></li>
-            <li class="dropdown">
-              <a href="#">Trigonometry Content</a>
-              <div class="dropdown-content">
-                <a href="TRR.html">Trigonometric Ratios And Rules</a>
-                <a href="TF.html">Trigonometric Functions</a>
-                <a href="CMA.html">Compound And Multiple Angles</a>
-                <a href="examp.html">Examples</a>
-                <a href="cheat.html">Trig Cheat Sheet</a>
-              </div>
-            </li>
-            <li><a href="faqs.html">FAQs</a></li>
-            <li><a href="siteDev.html">Site Developers</a></li>
-            <li><a href="dvd.html">Video Tutorials</a></li>
+            <li><a href="/frontend html/home.html">Home</a></li>
+            <li><a href="/frontend html/about.html">About</a></li>
+            <li><a href="/frontend html/help.html">Help</a></li>
+            <div class="dropdown">
+              <li>
+                <a href="#">Trigonometry-Content</a>
+                <div class="dropdown-content">
+                  <a href="/frontend html/TRR.html"
+                    >Trigonometric Ratios And Rules</a
+                  >
+                  <a href="/frontend html/TF.html">Trigonometric Functions</a>
+                  <a href="/frontend html/CMA.html"
+                    >Compound And Multiple Angles</a
+                  >
+                  <a href="/frontend html//frontend html/examp.html"
+                    >Examples</a
+                  >
+                  <a href="/frontend html/cheat.html">Trig Cheat Sheet</a>
+                </div>
+              </li>
+            </div>
+            <li><a href="/frontend html/faqs.html">FAQs</a></li>
+            <li><a href="/frontend html/siteDev.html">Site Developers</a></li>
           </ul>
         </div>
+        <i class="fa-solid fa-bars" onclick="showMenu()"></i>
       </nav>
 
       <div class="text-box">
         <h1>TRIGMASTERS</h1>
         <p>Creating a dedicated space for exploring trigonometry</p>
-        <a href="#" class="hero-btn">Visit Us To Know More</a>
+        <a href="" class="hero-btn">Visit Us To Know More</a>
       </div>
     </header>
 
@@ -84,7 +93,8 @@
         </p>
       </div>
       <!-- Image Section -->
-      <img src="/imgs/Diagram1.png" alt="Trigonometry Diagram" />
+
+      <img src="Diagram1.png" alt="Trigonometry Diagram" />
     </section>
 
     <!------Topics Under Trig--------->
@@ -148,15 +158,14 @@
               <strong>Find general solutions:</strong> Consider the periodic
               nature of trigonometric functions to get all possible solutions.
               For example, the general solution for <code>sin θ = x</code> is
-              <code>θ = sin<sup>-1</sup>(x) + 360°n</code> or
-              <code>θ = 180° - sin<sup>-1</sup>(x) + 360°n</code>, where
+              <code>θ = sin<sup>-1</sup>(x) + 360&deg;n</code> or
+              <code>θ = 180&deg; - sin<sup>-1</sup>(x) + 360&deg;n</code>, where
               <code>n</code> is an integer.
             </li>
           </ul>
         </div>
-
         <div class="course-col">
-          <h3>Graph Representation</h3>
+          <h3>Graph representation</h3>
           <p>
             Understanding the graphical representation of trigonometric
             functions is crucial in visualizing their behavior. Key features
@@ -166,7 +175,7 @@
           <ul>
             <li>
               <strong>Sine and Cosine Graphs:</strong> These are periodic
-              functions with a period of <code>360°</code> or
+              functions with a period of <code>360&deg;</code> or
               <code>2π</code> radians. The sine curve starts at 0, while the
               cosine curve starts at its maximum value.
               <ul>
@@ -176,10 +185,9 @@
                 </li>
                 <li>
                   <strong>Period:</strong> The length of one complete cycle
-                  (e.g., <code>360°</code> for <code>sin θ</code> and
+                  (e.g., <code>360&deg;</code> for <code>sin θ</code> and
                   <code>cos θ</code>).
                 </li>
-                <li></li>
                 <li>
                   <strong>Phase Shift:</strong> A horizontal shift of the graph
                   due to an added constant.
@@ -187,39 +195,19 @@
               </ul>
             </li>
             <li>
-              <strong>Tangent Graph:</strong> The tangent function has a period
-              of <code>180°</code> or <code>π</code> radians and has vertical
-              asymptotes where the function is undefined.
-              <ul>
-                <li>
-                  <strong>Amplitude:</strong> The tangent function does not have
-                  a maximum or minimum value.
-                </li>
-                <li>
-                  <strong>Period:</strong> The length of one complete cycle
-                  (e.g., <code>180°</code> for <code>tan θ</code>).
-                </li>
-                <li>
-                  <strong>Vertical Asymptotes:</strong> Lines where the function
-                  approaches infinity (e.g., at <code>90°</code> and
-
-                  <code>270°</code> for <code>tan θ</code>).
-                </li>
-              </ul>
+              <strong>Tangent Graph:</strong> This function has vertical
+              asymptotes where the function is undefined, and its period is
+              <code>180&deg;</code> or <code>π</code> radians.
             </li>
           </ul>
         </div>
       </div>
     </section>
-
-    <!-- Dynamic Content Area -->
-    <section id="content-area">
-      <!-- Dynamic content will be loaded here -->
-    </section>
+    <section></section>
 
     <!----------footer--------->
     <footer>
-      <p>© 2024 Trigonometry Website</p>
+      <p>&copy; 2024 Trigonometry Website</p>
     </footer>
   </body>
 </html>

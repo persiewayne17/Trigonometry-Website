@@ -1,77 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trigonometry Cheat Sheet</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
-        }
-        h1 {
-            color: #333;
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      header {
+        background-color: #2e86c1;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+      }
+      nav {
+        margin: 0;
+        padding: 0;
+      }
+      .nav-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .nav-links li {
+        display: inline-block;
+        margin-right: 20px;
+      }
+      .nav-links a {
+        color: white;
+        text-decoration: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+      .nav-links a:hover {
+        background-color: #1f6fb2;
+      }
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #2e86c1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+      .dropdown-content a {
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+      .dropdown-content a:hover {
+        background-color: #1f6fb2;
+      }
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      h1 {
+        color: #333;
+        text-align: center;
+        margin-top: 20px;
+      }
+      p {
+        text-align: center;
+        margin: 20px;
+      }
+      .container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-top: 20px;
+      }
+      .cheat-sheet {
+        width: 300px;
+        margin: 15px;
+        background-color: #fff;
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        text-align: center;
+      }
+      .cheat-sheet img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+      .cheat-sheet h3 {
+        margin-top: 10px;
+        color: #555;
+      }
+      footer {
+        margin-top: 40px;
+        color: #777;
+        text-align: center;
+        background-color: #2e86c1;
+        color: white;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+      @media (max-width: 768px) {
+        .nav-links {
+          flex-direction: column;
+          align-items: center;
         }
         .container {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin-top: 20px;
+          flex-direction: column;
+          align-items: center;
         }
         .cheat-sheet {
-            width: 300px;
-            margin: 15px;
-            background-color: #fff;
-            padding: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+          width: 90%;
         }
-        .cheat-sheet img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-        .cheat-sheet h3 {
-            margin-top: 10px;
-            color: #555;
-        }
-        footer {
-            margin-top: 40px;
-            color: #777;
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="help.html">Help</a></li>
+          <li class="dropdown">
+            <a href="#">Trigonometry Content</a>
+            <div class="dropdown-content">
+              <a href="TRR.html">Trigonometric Ratios And Rules</a>
+              <a href="TF.html">Trigonometric Functions</a>
+              <a href="CMA.html">Compound And Multiple Angles</a>
+              <a href="examp.html">Examples</a>
+              <a href="cheat.html">Trig Cheat Sheet</a>
+            </div>
+          </li>
+          <li><a href="faqs.html">FAQs</a></li>
+          <li><a href="siteDev.html">Site Developers</a></li>
+          <li><a href="dvd.html">Video Tutorials</a></li>
+        </ul>
+      </nav>
+    </header>
 
     <h1>Trigonometry Cheat Sheet</h1>
-    <p>Here are some useful cheat sheets for quick reference on Trigonometry concepts.</p>
+    <p>
+      Here are some useful cheat sheets for quick reference on Trigonometry
+      concepts.
+    </p>
 
     <div class="container">
-        <!-- Cheat Sheet 1 -->
-        <div class="cheat-sheet">
-            <img src="definition.jpg" alt="Definition Sheet 1">
+      <!-- Cheat Sheet 1 -->
+      <div class="cheat-sheet">
+        <img src="/imgs/definition.jpg" alt="Definition Sheet 1" />
         <h3>Definitions of the Trig. Functions</h3>
-        </div>
+      </div>
 
-        <!-- Cheat Sheet 2 -->
-        <div class="cheat-sheet">
-            <img src="formula.jpg" alt="Formula Sheet">
-            <h3>Formulas and Identities</h3>
-        </div>
+      <!-- Cheat Sheet 2 -->
+      <div class="cheat-sheet">
+        <img src="/imgs/formula.jpg" alt="Formula Sheet" />
+        <h3>Formulas and Identities</h3>
+      </div>
 
-        <!-- Cheat Sheet 3 -->
-        <div class="cheat-sheet">
-            <img src="inverse.jpg" alt=" Sheet">
-            <h3>Inverse Trigonometric Functions</h3>
-        </div>
+      <!-- Cheat Sheet 3 -->
+      <div class="cheat-sheet">
+        <img src="/imgs/inverse.jpg" alt=" Sheet" />
+        <h3>Inverse Trigonometric Functions</h3>
+      </div>
     </div>
 
-    <footer>
-        &copy; 2024 Trigonometry Learning Resources
-    </footer>
-
-</body>
+    <footer>&copy; 2024 Trigonometry Learning Resources</footer>
+  </body>
 </html>

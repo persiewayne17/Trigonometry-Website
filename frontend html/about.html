@@ -1,246 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trigonometry Topics for SHS 2</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 5px;
-            line-height: 1.6;
-            background-color: #f7f9fb;
-    
+      :root {
+        --primary-color: #2e86c1;
+        --secondary-color: #ffffff;
+        --accent-color: #1f6fb2;
+        --text-color: #333;
+        --background-color: #f4f4f4;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        line-height: 1.6;
+        background-color: var(--background-color);
+        color: var(--text-color);
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      header {
+        background-color: var(--primary-color);
+        padding: 10px 20px;
+        text-align: center;
+      }
+
+      nav {
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .nav-links li {
+        display: inline-block;
+      }
+
+      .nav-links a {
+        color: var(--secondary-color);
+        text-decoration: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      .nav-links a:hover {
+        background-color: var(--accent-color);
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: var(--primary-color);
+        min-width: 200px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .dropdown-content a {
+        color: var(--secondary-color);
+        padding: 0.5rem 1rem;
+        display: block;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .content {
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+        flex-grow: 1;
+      }
+
+      h1,
+      h2 {
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+        margin-top: 2rem;
+      }
+
+      p,
+      ul {
+        margin-bottom: 1rem;
+        text-align: justify;
+      }
+
+      code {
+        background-color: #f4f4f4;
+        padding: 0.2rem 0.4rem;
+        border-radius: 3px;
+        font-family: "Courier New", monospace;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: 1rem auto;
+        display: block;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      footer {
+        text-align: center;
+        padding: 1rem;
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        margin-top: auto;
+      }
+
+      @media (max-width: 768px) {
+        .nav-links {
+          flex-direction: column;
+          align-items: center;
         }
-header {
-    min-height: 20vh;
-    width: 100%;
-    background-color: #162347;
-    position: relative;
-}
 
-nav{
-    display: flex;
-    font-size: 14px;
-    padding: 2% 6%;
-    justify-content: space-between;
-    align-items: center;
-}
-.logo-video {
-    height: 100px;
-    width: 150px;
-}
-.nav-links{
-    flex: 1;
-    text-align: right;
-}
-.nav-links ul li{
-    list-style: none;
-    display: inline-block;
-    padding: 4px 8px;
-    position: relative;
-    font-size: 16px;
-    
-}
-.nav-links ul li a{
-    color: #7eddd5;
-    text-decoration: none;
-    
-}
-.nav-links ul li::after{
-    content: "";
-    width: 0%;
-    height: 2px;
-    background: #f44336;
-    display: block;
-    margin: auto;  
-    transition: 0.5s;  
-}
-.nav-links ul li:hover::after{
-    width: 100%;
-}
-nav .fa-solid{
-    display: none;
-}
-
-/* Show dropdown on hover */
-.dropdown {
-    position: relative;
-    display: inline-block;
-    font-size: 16px;
-    color: #2E86C1;
-}
-
-.dropdown button {
-    background-color: #162347;
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    font-size: 18px;
-    transition: background-color 0.3s ease;
-}
-
-.dropdown button:hover {
-    background-color: #862f2f59;
-}
-
-.dropdown-content {
-    text-align: left;
-    color: #a7c0d1;
-    display: none;
-    position: absolute;
-    background-color: #ffffff;
-    font-size: 16px;
-    min-width: 80px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: rgba(0, 0, 0, 0.61);
-    padding: 10px;
-    text-decoration: none;
-    display: block;
-    font-size: 18px;
-}
-
-.dropdown-content a:hover {
-    background-color: #b35757;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
- h1{
-    font-size: 32px;
-}
-
-        h2 {
-            color: #35393d;
-            text-align: Left;
+        .dropdown-content {
+          position: static;
+          display: none;
+          transform: none;
+          left: 0;
         }
-        h2 {
-            color: #2980b9;
-            margin-top: 40px;
+
+        .dropdown:hover .dropdown-content {
+          display: block;
         }
-        p {
-            margin-bottom: 20px;
-        }
-        code {
-            background-color: #f4f4f4;
-            padding: 2px 5px;
-            border-radius: 3px;
-        }
-        .content {
-            max-width: 800px;
-            margin: auto;
-        }
-        img {
-            width: 100%;
-            height: auto;
-            margin: 5px;
-            border-radius: 8px;
-        }
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            font-size: 0.9em;
-            color: #7f8c8d;
-       }
+      }
     </style>
-</head>
-<body>
-
-<header>
-        <nav>            
-                
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="help.html">Help</a></li>
-          <div class="dropdown">
-            <li><a href="#">Trigonometry-Content</a>
-                <div class="dropdown-content">
-                    <a href="TRR.html">Trigonometric Ratios And Rules</a>
-                    <a href="TF.html">Trigonometric Functions</a>
-                    <a href="CMA.html">Compound And
-                        Multiple Angles</a>
-                    <a href="examp.html">Examples</a>
-                    <a href="cheat.html">Trig Cheat Sheet</a>
-            
-                </div>
-                </li>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="help.html">Help</a></li>
+          <li class="dropdown">
+            <a href="#">Trigonometry Content</a>
+            <div class="dropdown-content">
+              <a href="TRR.html">Trigonometric Ratios And Rules</a>
+              <a href="TF.html">Trigonometric Functions</a>
+              <a href="CMA.html">Compound And Multiple Angles</a>
+              <a href="examp.html">Examples</a>
+              <a href="cheat.html">Trig Cheat Sheet</a>
             </div>
-            <li><a href="faqs.html">FAQs</a></li>
-            <li><a href="siteDev.html">Site Developers</a></li>
-            <li><a href="dvd.html">Video Tutorials</a></li>    
+          </li>
+          <li><a href="faqs.html">FAQs</a></li>
+          <li><a href="siteDev.html">Site Developers</a></li>
+          <li><a href="dvd.html">Video Tutorials</a></li>
         </ul>
+      </nav>
+    </header>
 
-        </div>
-    </nav>   
-</header>            
-
-    
-<h1>About Trigonometry</h1>
     <div class="content">
-        <h2>Trigonometry</h2>
-        <p>
-            Welcome to the Trigonometry Learning Resource for Senior High School (SHS) 2 students! This page provides a comprehensive overview of essential trigonometric concepts that are fundamental to understanding advanced mathematics. 
-        </p>
-        <p>
-            Trigonometry is a branch of mathematics that studies the relationships between the angles and sides of triangles. These concepts are used extensively in fields such as engineering, physics, architecture, and even computer science. By mastering these topics, you will not only improve your problem-solving skills but also build a strong foundation for more complex mathematical principles.
-        </p>
-        <p>
-            Below, we cover three key topics: Trigonometric Identities, Solving Trigonometric Equations, and Graphs of Trigonometric Functions. Each section is designed to provide you with the necessary knowledge and examples to help you understand and apply these concepts in real-world scenarios.
-        </p>
-        
+      <h1>About Trigonometry</h1>
+      <h2>Trigonometry</h2>
+      <p>
+        Welcome to the Trigonometry Learning Resource for Senior High School
+        (SHS) 2 students! This page provides a comprehensive overview of
+        essential trigonometric concepts that are fundamental to understanding
+        advanced mathematics.
+      </p>
+      <p>
+        Trigonometry is a branch of mathematics that studies the relationships
+        between the angles and sides of triangles. These concepts are used
+        extensively in fields such as engineering, physics, architecture, and
+        even computer science. By mastering these topics, you will not only
+        improve your problem-solving skills but also build a strong foundation
+        for more complex mathematical principles.
+      </p>
+      <p>
+        Below, we cover three key topics: Trigonometric Identities, Solving
+        Trigonometric Equations, and Graphs of Trigonometric Functions. Each
+        section is designed to provide you with the necessary knowledge and
+        examples to help you understand and apply these concepts in real-world
+        scenarios.
+      </p>
 
-        <h2>1. Trigonometric Identities</h2>
-        <p>Trigonometric identities are equations that involve trigonometric functions and are true for any value of the variable. Key identities include:</p>
+      <h2>1. Trigonometric Identities</h2>
+      <p>
+        Trigonometric identities are equations that involve trigonometric
+        functions and are true for any value of the variable. Key identities
+        include:
+      </p>
+      <ul>
+        <li>
+          <strong>Pythagorean Identity:</strong>
+          <code>sin<sup>2</sup>θ + cos<sup>2</sup>θ = 1</code>
+        </li>
+        <li><strong>Sum and Difference Formulas:</strong></li>
         <ul>
-            <li><strong>Pythagorean Identity:</strong> <code>sin<sup>2</sup>θ + cos<sup>2</sup>θ = 1</code></li>
-            <li><strong>Sum and Difference Formulas:</strong></li>
-            <ul>
-                <li><code>sin(A ± B) = sin A cos B ± cos A sin B</code></li>
-                <li><code>cos(A ± B) = cos A cos B ∓ sin A sin B</code></li>
-            </ul>
-            <li><strong>Double Angle Formulas:</strong></li>
-            <ul>
-                <li><code>sin 2θ = 2sin θ cos θ</code></li>
-                <li><code>cos 2θ = cos<sup>2</sup>θ - sin<sup>2</sup>θ</code></li>
-            </ul>
+          <li><code>sin(A ± B) = sin A cos B ± cos A sin B</code></li>
+          <li><code>cos(A ± B) = cos A cos B ∓ sin A sin B</code></li>
         </ul>
-
-        <!-- Placeholder image for Trigonometric Identities -->
-        <img src="image.png" alt="Trigonometric Identities Illustration">
-
-        <h2>2. Solving Trigonometric Equations</h2>
-        <p>Solving trigonometric equations involves finding the values of the variable that satisfy the equation. Key steps include isolating the trigonometric function and using inverse functions.</p>
+        <li><strong>Double Angle Formulas:</strong></li>
         <ul>
-            <li><strong>Isolate the function:</strong> Simplify to isolate <code>sin θ</code>, <code>cos θ</code>, etc.</li>
-            <li><strong>Use inverse trigonometry:</strong> Apply inverse functions to find the principal value.</li>
-            <li><strong>General solutions:</strong> Consider periodic nature for all solutions.</li>
+          <li><code>sin 2θ = 2sin θ cos θ</code></li>
+          <li><code>cos 2θ = cos<sup>2</sup>θ - sin<sup>2</sup>θ</code></li>
         </ul>
+      </ul>
 
-        <!-- Placeholder image for solving trigonometric equations -->
-        <img src="cat.jpg" alt="Solving Trigonometric Equations Illustration">
+      <img
+        src="/api/placeholder/800/600"
+        alt="Trigonometric Identities Illustration"
+      />
 
-        <h2>3. Graphs of Trigonometric Functions</h2>
-        <p>Trigonometric functions like sine and cosine are periodic, with specific features such as amplitude, period, and phase shift. Tangent graphs have vertical asymptotes and a period of <code>180&deg;</code>.</p>
-        <ul>
-            <li><strong>Sine and Cosine Graphs:</strong> Period of <code>360&deg;</code> or <code>2π</code> radians.</li>
-            <li><strong>Tangent Graph:</strong> Period of <code>180&deg;</code> or <code>π</code> radians, with asymptotes where the function is undefined.</li>
-        </ul>
+      <h2>2. Solving Trigonometric Equations</h2>
+      <p>
+        Solving trigonometric equations involves finding the values of the
+        variable that satisfy the equation. Key steps include isolating the
+        trigonometric function and using inverse functions.
+      </p>
+      <ul>
+        <li>
+          <strong>Isolate the function:</strong> Simplify to isolate
+          <code>sin θ</code>, <code>cos θ</code>, etc.
+        </li>
+        <li>
+          <strong>Use inverse trigonometry:</strong> Apply inverse functions to
+          find the principal value.
+        </li>
+        <li>
+          <strong>General solutions:</strong> Consider periodic nature for all
+          solutions.
+        </li>
+      </ul>
 
-        <!-- Placeholder image for Trigonometric Graphs -->
-        <img src="ball.jpg".jpg" alt="Trigonometric Graphs Illustration">
+      <img
+        src="/api/placeholder/800/600"
+        alt="Solving Trigonometric Equations Illustration"
+      />
 
+      <h2>3. Graphs of Trigonometric Functions</h2>
+      <p>
+        Trigonometric functions like sine and cosine are periodic, with specific
+        features such as amplitude, period, and phase shift. Tangent graphs have
+        vertical asymptotes and a period of <code>180°</code>.
+      </p>
+      <ul>
+        <li>
+          <strong>Sine and Cosine Graphs:</strong> Period of
+          <code>360°</code> or <code>2π</code> radians.
+        </li>
+      </ul>
     </div>
-
-    <footer>
-        &copy; 2024 Trigonometry Learning Resources
-    </footer>
-
-</body>
+  </body>
 </html>

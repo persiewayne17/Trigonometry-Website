@@ -1,32 +1,21 @@
-/* General Reset and Base Styles */
-:root {
-  --main-bg-color: #484075;
-  --primary-color: #ffd700;
-  --secondary-color: #333;
-  --text-color: #fff;
-  --font-family: "Arial", sans-serif;
-  --transition-time: 0.3s ease;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* General Styles */
 body {
-  font-family: var(--font-family);
+  font-family: Arial, sans-serif;
   line-height: 1.6;
-  color: var(--secondary-color);
-  background-color: var(--main-bg-color);
+  margin: 0;
+  color: #333;
+  background-color: #f4f4f4;
 }
 
-/* Header Styles */
 header {
-  color: var(--text-color);
-  text-align: center;
-  padding: 2rem 0;
+  background-color: #2e86c1;
+  color: white;
+  padding: 10px 20px;
   position: relative;
+  overflow: hidden;
+}
+
+nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -35,182 +24,45 @@ header {
 .logo-video {
   width: 60px;
   height: auto;
-  position: absolute;
-  left: 10px;
-}
-
-nav {
-  padding: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-nav ul {
-  list-style-type: none;
-  display: flex;
-  justify-content: flex-end;
-}
-
-nav ul li {
-  margin: 0 1rem;
-}
-
-nav ul li a {
-  color: var(--text-color);
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  transition: color var(--transition-time);
-}
-
-nav ul li a:hover {
-  color: var(--primary-color);
-}
-
-.text-box {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.text-box h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.text-box p {
-  font-size: 1rem;
-  margin-bottom: 2rem;
-}
-
-.hero-btn {
-  display: inline-block;
-  padding: 0.8rem 2rem;
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-  text-decoration: none;
   border-radius: 5px;
-  transition: background-color var(--transition-time);
 }
 
-.hero-btn:hover {
-  background-color: #e6c200;
+.menu-toggle {
+  display: none; /* Removed for this design */
 }
 
-/* Content Section Styles */
-.content {
+.nav-links {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links ul {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  padding: 2rem 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.content-text {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
+.nav-links li {
+  margin: 0 10px;
 }
 
-.content-text h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: var(--text-color);
-}
-
-.content-text p {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  color: var(--text-color);
-}
-
-.content img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 2rem auto;
-}
-
-/* Course Section Styles */
-.course {
-  padding: 2rem 0;
-  background-color: var(--main-bg-color);
-  color: var(--text-color);
-  text-align: center;
-}
-
-.course h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.course hr {
-  width: 50%;
-  margin: 1rem auto;
-  border: 1px solid var(--primary-color);
-}
-
-.course p {
-  font-size: 1rem;
-  margin-bottom: 2rem;
-}
-
-.course .row {
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 4rem auto;
-  padding: 0 2rem;
 }
 
-.course-col {
-  flex: 1;
-  min-width: 300px;
-  background-color: var(--text-color);
-  border-radius: 10px;
-  padding: 2rem;
-  margin: 1rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform var(--transition-time);
+.nav-links a:hover {
+  background-color: #1f6fb2;
 }
 
-.course-col:hover {
-  transform: translateY(-5px);
-}
-
-.course-col h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: var(--secondary-color);
-}
-
-.course-col ul {
-  list-style-type: none;
-  padding-left: 1rem;
-  text-align: left;
-}
-
-.course-col ul li {
-  margin-bottom: 0.5rem;
-}
-
-.course-col code {
-  background-color: #f0f0f0;
-  padding: 0.2rem 0.4rem;
-  border-radius: 3px;
-  font-family: "Courier New", monospace;
-}
-
-/* Footer Styles */
-footer {
-  background-color: var(--secondary-color);
-  color: var(--text-color);
-  text-align: center;
-  padding: 1rem;
-}
-
-/* Dropdown Styles */
 .dropdown {
   position: relative;
 }
@@ -218,151 +70,177 @@ footer {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
-  min-width: 200px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  background-color: #2e86c1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  text-align: left;
 }
 
 .dropdown-content a {
-  color: black;
+  color: white;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  text-align: left;
 }
 
 .dropdown-content a:hover {
-  background-color: #f1f1f1;
+  background-color: #1f6fb2;
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
+.text-box {
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+}
+
+.hero-btn {
+  background-color: #2874a6;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.hero-btn:hover {
+  background-color: #1f6fb2;
+}
+
+/* Content Section */
+.content {
+  padding: 20px;
+  background-color: white;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+/* Course Section */
+.course {
+  padding: 20px;
+  background-color: white;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.course h1 {
+  text-align: center;
+  color: #2e86c1;
+}
+
+.course hr {
+  border: 1px solid #2e86c1;
+  margin: 10px 0;
+}
+
+.course p {
+  text-align: center;
+}
+
+.course-col {
+  margin: 20px 0;
+}
+
+.course-col h3 {
+  color: #2874a6;
+}
+
+.course-col ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.course-col ul li {
+  margin-bottom: 10px;
+}
+
+.course-col code {
+  background-color: #f4f4f4;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+/* Footer */
+footer {
+  background-color: #2e86c1;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
-  .content {
+  .nav-links {
     flex-direction: column;
+    align-items: center;
   }
 
-  .content-text {
-    margin-right: 0;
-    margin-bottom: 2rem;
-  }
-
-  .row {
+  .nav-links ul {
     flex-direction: column;
+    padding: 0;
+    margin: 0;
   }
 
-  .course-col {
-    margin: 1rem 0;
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .logo-video {
+    width: 50px;
   }
 }
 
 @media (max-width: 768px) {
-  header {
-    padding: 2rem 0;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-
-  .logo-video {
-    left: 10px;
-    width: 60px;
-  }
-
   .text-box h1 {
-    font-size: 2.5rem;
+    font-size: 24px;
   }
 
-  .text-box p {
-    font-size: 1rem;
+  .hero-btn {
+    padding: 8px 16px;
   }
 
-  nav ul {
-    flex-direction: column;
-    align-items: flex-start;
+  .course {
+    margin: 10px;
   }
 
-  nav ul li {
-    margin: 0.5rem 0;
-  }
-
-  .nav-links {
-    position: fixed;
-    background: var(--secondary-color);
-    height: 100vh;
-    width: 200px;
-    top: 0;
-    left: -200px;
-    text-align: left;
-    z-index: 1000;
-    transition: left var(--transition-time);
-  }
-
-  .nav-links.show {
-    left: 0;
-  }
-
-  .hamburger {
-    display: flex;
-    position: absolute;
-    left: 20px;
-    top: 20px;
+  .content img {
+    max-width: 100%;
   }
 }
 
-@media (min-width: 769px) {
-  .fa-xmark,
-  .fa-bars,
-  .hamburger {
-    display: none;
+@media (max-width: 480px) {
+  .text-box h1 {
+    font-size: 20px;
   }
 
-  header {
-    justify-content: space-between;
-  }
-
-  nav {
-    justify-content: flex-end;
-  }
-
-  nav ul {
-    flex-direction: row;
-    justify-content: flex-end;
-  }
-
-  .nav-links {
-    position: static;
-    height: auto;
-    width: auto;
-    background: none;
-    text-align: center;
-    transition: none;
-  }
-
-  .nav-links ul {
-    padding: 0;
-  }
-
-  .nav-links ul li {
-    margin: 0 1rem;
-  }
-
-  .nav-links ul li a {
-    padding: 0;
-  }
-
-  .text-box {
-    text-align: center;
-    margin-top: 2rem;
-  }
-
-  .text-box h1,
-  .text-box p,
   .hero-btn {
-    display: block;
-    margin: 0 auto;
+    padding: 6px 12px;
+  }
+
+  .content {
+    margin: 5px;
+  }
+
+  .course {
+    margin: 5px;
+  }
+
+  .course-col {
+    margin: 10px 0;
   }
 }

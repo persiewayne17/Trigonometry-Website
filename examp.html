@@ -7,12 +7,72 @@
     <style>
       body {
         font-family: Arial, sans-serif;
-        line-height: 1.6;
-        margin: 20px;
-        color: #333;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      header {
+        background-color: #2e86c1;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+      }
+      nav {
+        margin: 0;
+        padding: 0;
+      }
+      .nav-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .nav-links li {
+        display: inline-block;
+        margin-right: 20px;
+      }
+      .nav-links a {
+        color: white;
+        text-decoration: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+      .nav-links a:hover {
+        background-color: #1f6fb2;
+      }
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #2e86c1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+      .dropdown-content a {
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+      .dropdown-content a:hover {
+        background-color: #1f6fb2;
+      }
+      .dropdown:hover .dropdown-content {
+        display: block;
       }
       h1 {
         color: #2e86c1;
+        text-align: center;
+        margin-top: 20px;
       }
       h2 {
         color: #2874a6;
@@ -36,15 +96,50 @@
         margin-bottom: 10px;
       }
       footer {
-        background-color: #333;
-        color: #fff;
-        padding: 1em;
+        margin-top: 40px;
+        color: #777;
         text-align: center;
-        clear: both;
+        background-color: #2e86c1;
+        color: white;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+      @media (max-width: 768px) {
+        .nav-links {
+          flex-direction: column;
+          align-items: center;
+        }
       }
     </style>
   </head>
   <body>
+    <!-- Header with Navigation -->
+    <header>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="help.html">Help</a></li>
+          <li class="dropdown">
+            <a href="#">Trigonometry Content</a>
+            <div class="dropdown-content">
+              <a href="TRR.html">Trigonometric Ratios And Rules</a>
+              <a href="TF.html">Trigonometric Functions</a>
+              <a href="CMA.html">Compound And Multiple Angles</a>
+              <a href="examp.html">Examples</a>
+              <a href="cheat.html">Trig Cheat Sheet</a>
+            </div>
+          </li>
+          <li><a href="faqs.html">FAQs</a></li>
+          <li><a href="siteDev.html">Site Developers</a></li>
+          <li><a href="dvd.html">Video Tutorials</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
     <h1>Trigonometry Examples: Questions and Answers</h1>
 
     <div class="example">
@@ -54,135 +149,46 @@
           Solve, two friends, Rakesh and Vishal started climbing a
           pyramid-shaped hill. Rakesh climbs 315 m and finds that the angle of
           depression is 72.3 degrees from his starting point. How high is he
-          from the ground?.
+          from the ground?
         </p>
       </div>
       <div class="answer">
         <h2>Answer:</h2>
-        <img src="/imgs/mphot.jpg" alt="Trulli" width="500" height="333" />
-        <p>Let m is the height above the ground.</p>
+        <img src="mphot.jpg" alt="Trulli" width="500" height="333" />
+        <p>Let m be the height above the ground.</p>
         <p>To find: Value of m</p>
         <p>To solve m, use the sine ratio.</p>
         <p>sin 72.3° = m/315</p>
-        <p>0.953= m/315</p>
-        <p>m = 315 x 0.953</p>
-        <p>m = 300.195 mtr <br />The man is 300.195 mtr above the ground.</p>
+        <p>0.953 = m/315</p>
+        <p>m = 315 × 0.953</p>
+        <p>
+          <strong>m = 300.195 m</strong> <br />The man is 300.195 m above the
+          ground.
+        </p>
       </div>
     </div>
+
     <div class="example">
       <div class="question">
         <h2>Question 2:</h2>
         <p>
-          Solve, A man is observing a pole of height 55 foot. According to his
-          measurement, pole cast a 23 feet long shadow. Can you help him to know
-          the angle of elevation of the sun from the tip of shadow?
+          Solve, A man is observing a pole of height 55 feet. According to his
+          measurement, the pole casts a 23-foot long shadow. Can you help him to
+          know the angle of elevation of the sun from the tip of the shadow?
         </p>
       </div>
       <div class="answer">
         <h2>Answer:</h2>
         <img src="smage.jpg" alt="Trulli" width="500" height="333" />
-        <p>Let x be the angles of elevation of the sun, then</p>
+        <p>Let x be the angle of elevation of the sun.</p>
         <p>tan x = 55/23 = 2.391</p>
         <p>x = tan<sup>-1</sup>(2.391)</p>
-        <p>x = 67.30°</p>
+        <p><strong>x = 67.30°</strong></p>
       </div>
     </div>
 
-    <div class="example">
-      <div class="question">
-        <h2>Question 3:</h2>
-        <p>
-          Find the length of the hypotenuse of a right triangle if one of the
-          angles is 30° and the length of the side opposite this angle is 5 cm.
-        </p>
-      </div>
-      <div class="answer">
-        <h2>Answer:</h2>
-        <p>We use the sine function, which is defined as:</p>
-        <p><strong>sin(θ) = Opposite / Hypotenuse</strong></p>
-        <p>Here, θ = 30° and Opposite = 5 cm.</p>
-        <p>So, sin(30°) = 5 / Hypotenuse</p>
-        <p>We know that sin(30°) = 0.5. Therefore,</p>
-        <p>0.5 = 5 / Hypotenuse</p>
-        <p>Hypotenuse = 5 / 0.5 = 10 cm</p>
-        <p>
-          <strong>Final Answer:</strong> The length of the hypotenuse is 10 cm.
-        </p>
-      </div>
-    </div>
+    <!-- Add more examples as needed... -->
 
-    <div class="example">
-      <div class="question">
-        <h2>Question 4:</h2>
-        <p>
-          Determine the value of angle θ in a right triangle if the length of
-          the adjacent side is 4 cm and the hypotenuse is 8 cm.
-        </p>
-      </div>
-      <div class="answer">
-        <h2>Answer:</h2>
-        <p>We use the cosine function, which is defined as:</p>
-        <p><strong>cos(θ) = Adjacent / Hypotenuse</strong></p>
-        <p>Here, Adjacent = 4 cm and Hypotenuse = 8 cm.</p>
-        <p>So, cos(θ) = 4 / 8 = 0.5</p>
-        <p>We know that cos(60°) = 0.5. Therefore,</p>
-        <p><strong>θ = 60°</strong></p>
-        <p><strong>Final Answer:</strong> The value of angle θ is 60°.</p>
-      </div>
-    </div>
-
-    <div class="example">
-      <div class="question">
-        <h2>Question 5:</h2>
-        <p>
-          In a right triangle, if the opposite side is 7 cm and the adjacent
-          side is 24 cm, find the value of the angle θ.
-        </p>
-      </div>
-      <div class="answer">
-        <h2>Answer:</h2>
-        <p>We use the tangent function, which is defined as:</p>
-        <p><strong>tan(θ) = Opposite / Adjacent</strong></p>
-        <p>Here, Opposite = 7 cm and Adjacent = 24 cm.</p>
-        <p>So, tan(θ) = 7 / 24</p>
-        <p>Using a calculator, we find:</p>
-        <p>θ = tan<sup>-1</sup>(7 / 24) ≈ 16.26°</p>
-        <p>
-          <strong>Final Answer:</strong> The value of angle θ is approximately
-          16.26°.
-        </p>
-      </div>
-    </div>
-
-    <div class="example">
-      <div class="question">
-        <h2>Question 6:</h2>
-        <p>
-          If sin(θ) = 0.866 and θ is an acute angle, what is the value of θ?
-        </p>
-      </div>
-      <div class="answer">
-        <h2>Answer:</h2>
-        <p>We use the inverse sine function:</p>
-        <p>θ = sin<sup>-1</sup>(0.866)</p>
-        <p>Using a calculator, we find:</p>
-        <p>θ ≈ 60°</p>
-        <p>
-          <strong>Final Answer:</strong> The value of θ is approximately 60°.
-        </p>
-      </div>
-    </div>
-
-    <!----Javascript for Toggle Menu----->
-    <script>
-      var vavLinks = document.getElementById(navLinks);
-      function showMenu() {
-        navLinks.style.right = "0";
-      }
-      function hideMenu() {
-        navLinks.style.right = "-200px";
-      }
-    </script>
     <footer>
       <p>&copy; 2024 Trigonometry Website</p>
     </footer>

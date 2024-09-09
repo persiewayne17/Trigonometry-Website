@@ -7,8 +7,72 @@
     <style>
       body {
         font-family: Arial, sans-serif;
-        line-height: 1.6;
-        margin: 20px;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      header {
+        background-color: #2e86c1;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+      }
+      nav {
+        margin: 0;
+        padding: 0;
+      }
+      .nav-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .nav-links li {
+        display: inline-block;
+        margin-right: 20px;
+      }
+      .nav-links a {
+        color: white;
+        text-decoration: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+      .nav-links a:hover {
+        background-color: #1f6fb2;
+      }
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #2e86c1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+      .dropdown-content a {
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+      .dropdown-content a:hover {
+        background-color: #1f6fb2;
+      }
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      h1 {
+        color: #333;
+        text-align: center;
+        margin-top: 20px;
       }
       h2 {
         color: #2e86c1;
@@ -17,11 +81,8 @@
         color: #2874a6;
       }
       p {
-        margin-bottom: 10px;
-      }
-      ul {
-        list-style-type: square;
-        margin-left: 20px;
+        text-align: center;
+        margin: 20px;
       }
       .formula {
         background-color: #f4f4f4;
@@ -29,33 +90,63 @@
         border-left: 3px solid #2e86c1;
         margin: 10px 0;
       }
+      ul {
+        list-style-type: square;
+        margin-left: 20px;
+      }
       footer {
-        background-color: #333;
-        color: #fff;
-        padding: 1em;
+        margin-top: 40px;
+        color: #777;
         text-align: center;
-        clear: both;
+        background-color: #2e86c1;
+        color: white;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+      @media (max-width: 768px) {
+        .nav-links {
+          flex-direction: column;
+          align-items: center;
+        }
       }
     </style>
   </head>
   <body>
-    <h2>Trigonometric Ratios and Rules</h2>
+    <!-- Header with Navigation -->
+    <header>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="help.html">Help</a></li>
+          <li class="dropdown">
+            <a href="#">Trigonometry Content</a>
+            <div class="dropdown-content">
+              <a href="TRR.html">Trigonometric Ratios And Rules</a>
+              <a href="TF.html">Trigonometric Functions</a>
+              <a href="CMA.html">Compound And Multiple Angles</a>
+              <a href="examp.html">Examples</a>
+              <a href="cheat.html">Trig Cheat Sheet</a>
+            </div>
+          </li>
+          <li><a href="faqs.html">FAQs</a></li>
+          <li><a href="siteDev.html">Site Developers</a></li>
+          <li><a href="dvd.html">Video Tutorials</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <p>
-      Trigonometry is a branch of mathematics that deals with the relationships
-      between the angles and sides of triangles, especially right-angled
-      triangles. In JHS 2, we focus on understanding the basic trigonometric
-      ratios, how angles can be measured in radians, and applying the sine and
-      cosine rules to solve problems, including those involving bearings.
-    </p>
+    <!-- Main content -->
+    <h1>Trigonometric Ratios and Rules</h1>
 
-    <h3>1. Basic Trigonometric Ratios and Their Reciprocals</h3>
+    <h2>1. Basic Trigonometric Ratios and Their Reciprocals</h2>
     <p>
       Trigonometry Ratios-Sine, Cosine, Tangent. The trigonometric ratios of a
       triangle are also called the trigonometric functions. Sine, cosine, and
       tangent are 3 important trigonometric functions and are abbreviated as
-      sin, cos and tan. Let us see how are these ratios or functions, evaluated
-      in case of a right-angled triangle.
+      sin, cos and tan.
     </p>
     <img src="hypo.jpg" alt="Trulli" width="500" height="333" />
 
@@ -92,82 +183,8 @@
       <p><strong>tan(θ) = Opposite / Adjacent</strong></p>
     </div>
 
-    <p>These ratios also have reciprocal functions:</p>
-    <ul>
-      <li><strong>Cosecant (csc or cosec)</strong>: Reciprocal of sine.</li>
-    </ul>
-    <div class="formula">
-      <p><strong>csc(θ) = 1 / sin(θ) = Hypotenuse / Opposite</strong></p>
-    </div>
-    <ul>
-      <li><strong>Secant (sec)</strong>: Reciprocal of cosine.</li>
-    </ul>
-    <div class="formula">
-      <p><strong>sec(θ) = 1 / cos(θ) = Hypotenuse / Adjacent</strong></p>
-    </div>
-    <ul>
-      <li><strong>Cotangent (cot)</strong>: Reciprocal of tangent.</li>
-    </ul>
-    <div class="formula">
-      <p><strong>cot(θ) = 1 / tan(θ) = Adjacent / Opposite</strong></p>
-    </div>
+    <!-- More content can follow here... -->
 
-    <h3>2. Angles in Radians</h3>
-    <p>
-      While angles are commonly measured in degrees, they can also be measured
-      in radians. Radians provide a different way to express angles based on the
-      radius of a circle:
-    </p>
-    <ul>
-      <li>
-        <strong>Radians</strong>: One full rotation around a circle is 2π
-        radians, which is equal to 360 degrees. Therefore,
-      </li>
-    </ul>
-    <div class="formula">
-      <p><strong>π radians = 180°</strong></p>
-    </div>
-    <p>
-      To convert degrees to radians, multiply the number of degrees by π/180. To
-      convert radians to degrees, multiply by 180/π.
-    </p>
-
-    <h3>3. Application of Sine and Cosine Rules to Bearings</h3>
-    <p>
-      Bearings are a way of describing direction using angles measured clockwise
-      from the north direction. When solving problems involving bearings, the
-      sine and cosine rules can be very useful:
-    </p>
-    <ul>
-      <li><strong>Sine Rule</strong>:</li>
-    </ul>
-    <div class="formula">
-      <p><strong>a / sin(A) = b / sin(B) = c / sin(C)</strong></p>
-    </div>
-    <p>
-      This rule is used to find unknown sides or angles in any triangle when you
-      know either two angles and one side or two sides and a non-enclosed angle.
-    </p>
-    <ul>
-      <li><strong>Cosine Rule</strong>:</li>
-    </ul>
-    <div class="formula">
-      <p><strong>c² = a² + b² - 2ab cos(C)</strong></p>
-    </div>
-    <p>
-      This rule is useful for finding an unknown side or angle in a triangle
-      when you know two sides and the included angle or all three sides.
-    </p>
-    <p>
-      Using these rules, you can solve various real-world problems, such as
-      determining the direction or distance between two points using bearings.
-      For example, if you know the angles and distances between landmarks, you
-      can use the sine and cosine rules to calculate the exact direction or
-      distance you need to travel.
-    </p>
-    <!----Javascript for Toggle Menu----->
-    <footer>
-      <p>&copy; 2024 Trigonometry Website</p>
-    </footer>
+    <footer>&copy; 2024 Trigonometry Learning Resources</footer>
   </body>
 </html>
